@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Collective Story — Reminder Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FAF9F7;--black:#111111;--gray:#555555;
+  --light:#E8E6E1;--red:#C0392B;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);color:var(--black);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* ── HEADER ── */
+header{
+  border-bottom:1px solid var(--light);
+  padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.brand-heart{color:var(--red)}
+.back{
+  font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gray);
+  text-decoration:none;display:flex;align-items:center;gap:6px;
+  transition:color .2s;
+}
+.back:hover{color:var(--black)}
+
+/* ── LAYOUT ── */
+.page{max-width:600px;margin-inline:auto;padding:64px 24px 100px}
+
+/* ── INTRO ── */
+.form-eyebrow{
+  font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--red);margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,7vw,46px);font-weight:900;
+  line-height:1.05;letter-spacing:-.025em;margin-bottom:20px;
+}
+.form-intro{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:12px}
+.form-note{
+  font-size:12px;color:var(--gray);font-style:italic;
+  padding:16px 20px;border-left:2px solid var(--red);
+  margin:28px 0 44px;line-height:1.7;
+}
+
+/* ── FORM ── */
+.form-stack{display:flex;flex-direction:column;gap:32px}
+
+.field{display:flex;flex-direction:column;gap:8px}
+label{
+  font-size:12px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--black);
+}
+.field-hint{
+  font-size:12px;color:var(--gray);
+  margin-top:-4px;line-height:1.6;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+  font-family:'Inter',sans-serif;
+  font-size:15px;color:var(--black);
+  background:var(--white);
+  border:1.5px solid var(--light);
+  padding:14px 16px;
+  width:100%;outline:none;
+  transition:border-color .2s;
+  border-radius:0;
+  appearance:none;-webkit-appearance:none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus{border-color:var(--black)}
+textarea{resize:vertical;min-height:140px;line-height:1.65}
+select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23555' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;
+  padding-right:40px;
+}
+
+/* radio / checkbox groups */
+.choice-group{display:flex;flex-direction:column;gap:10px}
+.choice{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 16px;
+  background:var(--white);border:1.5px solid var(--light);
+  cursor:pointer;transition:border-color .2s;
+}
+.choice:has(input:checked){border-color:var(--black)}
+.choice input{
+  margin-top:3px;flex-shrink:0;
+  accent-color:var(--black);
+  width:16px;height:16px;cursor:pointer;
+}
+.choice-label{font-size:14px;line-height:1.5}
+.choice-label small{display:block;font-size:12px;color:var(--gray);margin-top:2px}
+
+/* consent block */
+.consent{
+  background:var(--white);border:1px solid var(--light);
+  padding:24px;display:flex;flex-direction:column;gap:14px;
+}
+.consent-row{display:flex;align-items:flex-start;gap:14px}
+.consent-row input[type="checkbox"]{
+  margin-top:3px;flex-shrink:0;
+  accent-color:var(--black);
+  width:17px;height:17px;cursor:pointer;
+}
+.consent-text{font-size:13px;color:var(--gray);line-height:1.65}
+.consent-text strong{color:var(--black)}
+
+/* section divider */
+.form-section-label{
+  font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gray);
+  padding-bottom:14px;border-bottom:1px solid var(--light);
+}
+
+/* submit */
+.submit-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.btn-submit{
+  font-family:'Inter',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--black);color:var(--white);border:none;
+  padding:17px 32px;cursor:pointer;
+  display:flex;align-items:center;gap:8px;
+  transition:background .2s,transform .15s;
+  width:100%;justify-content:center;
+}
+.btn-submit:hover{background:#2a2a2a;transform:translateY(-1px)}
+.submit-note{font-size:11px;color:var(--gray);font-style:italic;line-height:1.6}
+
+/* ── SUCCESS STATE ── */
+.success{
+  display:none;text-align:center;padding:60px 0;
+}
+.success-heart{font-size:48px;color:var(--red);margin-bottom:24px}
+.success h2{
+  font-size:28px;font-weight:800;letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+.success p{font-size:15px;color:var(--gray);margin-bottom:32px;line-height:1.75}
+.btn-return{
+  font-family:'Inter',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--black);color:var(--white);border:none;
+  padding:15px 28px;cursor:pointer;
+  transition:background .2s;
+}
+.btn-return:hover{background:#2a2a2a}
+
+/* ── FOOTER ── */
+footer{
+  border-top:1px solid var(--light);
+  text-align:center;padding:28px 24px;
+  font-size:11px;color:var(--gray);letter-spacing:.04em;
+}
+
+/* ── MOBILE ── */
+@media(max-width:480px){
+  .page{padding:48px 20px 80px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand"><span class="brand-heart">♥</span> Reminder Project</div>
+  <a href="[LANDING PAGE LINK]" class="back">← Back</a>
+</header>
+
+<main class="page">
+
+  <!-- INTRO -->
+  <p class="form-eyebrow">The Collective Story</p>
+  <h1>Your story<br>belongs here.</h1>
+  <p class="form-intro">Millions of small businesses lived a version of what happened to us between 2020 and now. Most closed quietly. Most owners said nothing publicly.</p>
+  <p class="form-intro">This is the record. Brief, honest accounts from people who were inside it — not filtered through media, not shaped by politics. Just what happened.</p>
+  <div class="form-note">
+    Your name stays yours. Your submission will be reviewed before anything is shared publicly. You decide how much — or how little — identifies you.
+  </div>
+
+  <!-- FORM -->
+  <form id="collectiveForm" novalidate>
+    <div class="form-stack">
+
+      <!-- SECTION: YOU -->
+      <p class="form-section-label">About you</p>
+
+      <div class="field">
+        <label for="firstName">First name <span style="color:var(--red)">*</span></label>
+        <input type="text" id="firstName" name="firstName" placeholder="First name only is fine" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address <span style="color:var(--red)">*</span></label>
+        <p class="field-hint">We'll use this only to contact you if we want to follow up or share your story. Never sold. Never shared.</p>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="location">City / State (optional)</label>
+        <p class="field-hint">Helps show how widespread this was. Leave blank if you prefer.</p>
+        <input type="text" id="location" name="location" placeholder="e.g. Chicago, IL">
+      </div>
+
+      <!-- SECTION: YOUR BUSINESS -->
+      <p class="form-section-label">Your business</p>
+
+      <div class="field">
+        <label for="businessType">What kind of business? <span style="color:var(--red)">*</span></label>
+        <select id="businessType" name="businessType" required>
+          <option value="" disabled selected>Select a category</option>
+          <option>Restaurant / Bar / Food service</option>
+          <option>Retail store</option>
+          <option>Service business (salon, gym, studio, etc.)</option>
+          <option>Creative / Maker / Artisan</option>
+          <option>Professional services</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="yearsOpen">How long were you open?</label>
+        <input type="text" id="yearsOpen" name="yearsOpen" placeholder="e.g. 12 years, 18 months">
+      </div>
+
+      <!-- SECTION: WHAT HAPPENED -->
+      <p class="form-section-label">What happened</p>
+
+      <div class="field">
+        <label>What pressure did you face? <span style="color:var(--red)">*</span></label>
+        <p class="field-hint">Check all that apply.</p>
+        <div class="choice-group" role="group" aria-label="Pressure types">
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="landlord">
+            <span class="choice-label">Predatory or unresponsive landlord</span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="bank">
+            <span class="choice-label">Bank pressure, loan issues, or changed terms</span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="irs">
+            <span class="choice-label">IRS or tax enforcement</span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="covid-relief">
+            <span class="choice-label">COVID relief that didn't come through</span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="supply">
+            <span class="choice-label">Supply chain or vendor collapse</span>
+          </label>
+          <label class="choice">
+            <input type="checkbox" name="pressure" value="other">
+            <span class="choice-label">Something else</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="timeline">Roughly when did things fall apart?</label>
+        <select id="timeline" name="timeline">
+          <option value="" disabled selected>Select a range</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>Still happening</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="outcome">What was the outcome?</label>
+        <div class="choice-group" role="group" aria-label="Business outcome">
+          <label class="choice">
+            <input type="radio" name="outcome" value="closed">
+            <span class="choice-label">We closed permanently</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="outcome" value="survived">
+            <span class="choice-label">We survived — barely</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="outcome" value="rebuilding">
+            <span class="choice-label">We closed and I'm rebuilding something new</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="outcome" value="inprogress">
+            <span class="choice-label">Still in it — outcome unknown</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION: YOUR WORDS -->
+      <p class="form-section-label">In your own words</p>
+
+      <div class="field">
+        <label for="story">Tell us what happened. <span style="color:var(--red)">*</span></label>
+        <p class="field-hint">No minimum, no maximum. Write as much or as little as feels right. You don't have to be fair to the institutions that weren't fair to you.</p>
+        <textarea id="story" name="story" placeholder="What happened. What it felt like. What came after." required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="oneLineVersion">If you had to describe it in one sentence?</label>
+        <p class="field-hint">Optional — but these become part of the collective voice.</p>
+        <input type="text" id="oneLineVersion" name="oneLineVersion" placeholder="e.g. The bank changed the terms the day we needed them most.">
+      </div>
+
+      <div class="field">
+        <label for="whereNow">Where are you now?</label>
+        <p class="field-hint">Optional. Rebuilding, healing, still figuring it out — all valid.</p>
+        <textarea id="whereNow" name="whereNow" style="min-height:90px" placeholder="What came after. What you're carrying. What you're building."></textarea>
+      </div>
+
+      <!-- CONSENT -->
+      <p class="form-section-label">Before you submit</p>
+
+      <div class="consent">
+        <div class="consent-row">
+          <input type="checkbox" id="consent1" name="consent1" required>
+          <p class="consent-text"><strong>I understand this may be shared publicly</strong> as part of The Collective Story — with my consent level below.</p>
+        </div>
+        <div class="consent-row">
+          <input type="checkbox" id="consent2" name="consent2" required>
+          <p class="consent-text"><strong>This is my real experience.</strong> I'm not submitting on behalf of a brand, political group, or organization.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>How much can we share? <span style="color:var(--red)">*</span></label>
+        <div class="choice-group" role="group" aria-label="Sharing preference">
+          <label class="choice">
+            <input type="radio" name="shareLevel" value="full" required>
+            <span class="choice-label">
+              Full story — use my first name and city
+              <small>Most impact. Still no last name or email shared.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="shareLevel" value="anonymous">
+            <span class="choice-label">
+              Anonymous — no name, no location
+              <small>Your words only. Nothing that identifies you.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="shareLevel" value="review">
+            <span class="choice-label">
+              Contact me before sharing anything
+              <small>We'll reach out first. You approve before anything goes public.</small>
+            </span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="shareLevel" value="private">
+            <span class="choice-label">
+              Private — for the record only
+              <small>Never published. Read by our team only.</small>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="submit-wrap">
+        <button type="submit" class="btn-submit">
+          <span style="color:var(--red)">♥</span> Submit My Story
+        </button>
+        <p class="submit-note">
+          Every submission is read by a real person. We don't automate this part.
+        </p>
+      </div>
+
+    </div><!-- /form-stack -->
+  </form>
+
+  <!-- SUCCESS STATE -->
+  <div class="success" id="successMsg" aria-live="polite">
+    <div class="success-heart" aria-hidden="true">♥</div>
+    <h2>It's in the record.</h2>
+    <p>Thank you for trusting us with this. Your story has been received and will be read by a real person. If you selected "contact me first," we'll be in touch before anything is shared.</p>
+    <p style="font-size:13px;color:var(--gray);font-style:italic">What you went through mattered. So does saying it out loud.</p>
+    <button class="btn-return" onclick="window.location.href='[LANDING PAGE LINK]'">← Back to Reminder Project</button>
+  </div>
+
+</main>
+
+<footer>
+  <strong>Reminder Project™</strong> · The Collective Story<br>
+  Born from collapse. Built by hand.
+</footer>
+
+<script>
+document.getElementById('collectiveForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Basic required field validation
+  const required = this.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(field => {
+    if (field.type === 'checkbox' && !field.checked) { valid = false; field.closest('.consent-row, .choice').style.outline = '2px solid #C0392B'; }
+    else if (field.type === 'radio') {
+      const group = document.querySelectorAll(`[name="${field.name}"]`);
+      const checked = [...group].some(r => r.checked);
+      if (!checked) valid = false;
+    }
+    else if (!field.value.trim()) { valid = false; field.style.borderColor = '#C0392B'; }
+    else { field.style.borderColor = ''; }
+  });
+
+  if (!valid) {
+    // Scroll to first error
+    const firstError = this.querySelector('[style*="C0392B"]');
+    if (firstError) firstError.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  fetch('https://formspree.io/f/xlgpqjgd', {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(res => {
+    if (res.ok) {
+      this.style.display = 'none';
+      const success = document.getElementById('successMsg');
+      success.style.display = 'block';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    } else {
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  })
+  .catch(() => {
+    alert('Network error. Please check your connection and try again.');
+  });
+});
+
+// Clear error styling on input
+document.querySelectorAll('input, textarea, select').forEach(el => {
+  el.addEventListener('input', function() {
+    this.style.borderColor = '';
+    this.style.outline = '';
+  });
+});
+</script>
+</body>
+</html>
