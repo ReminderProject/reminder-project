@@ -21,7 +21,7 @@
   --shadow:0 2px 14px rgba(0,0,0,0.08);
   --max:680px;
   --pad:24px;
-  --sec:88px;
+  --sec:56px;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
@@ -132,8 +132,13 @@ nav{
 #story li:last-child{border-bottom:none}
 #story .bmark{color:var(--red);flex-shrink:0;margin-top:3px}
 .disclaimer{
-  font-size:11px;color:var(--gray);font-style:italic;
-  margin-top:22px;padding-top:18px;border-top:1px solid var(--light);
+  font-size:14px;font-weight:700;color:var(--black);
+  font-style:normal;letter-spacing:.01em;
+  margin-top:24px;padding:18px 20px;
+  border-top:2px solid var(--black);
+  border-left:3px solid var(--red);
+  background:var(--bg);
+  line-height:1.6;
 }
 
 /* ── TIMELINE ── */
@@ -298,10 +303,10 @@ footer a:hover{color:var(--white)}
 <!-- ════════════ HERO ════════════ -->
 <section id="hero" aria-label="Introduction">
   <div class="wrap">
-    <p class="hero-eyebrow reveal">A true story &nbsp;·&nbsp; Handmade objects &nbsp;·&nbsp; No spin</p>
+    <p class="hero-eyebrow reveal">A true story &nbsp;+&nbsp; A reminder to hold &nbsp;+&nbsp; No spin</p>
     <h1 class="reveal">We didn't fail.<br>The <em>system</em> did.</h1>
     <p class="hero-sub reveal">The reminder that survived it ↓</p>
-    <p class="hero-micro reveal">Handmade polymer clay Hearts. Real story. Calm, factual, human.</p>
+    <p class="hero-micro reveal">Handmade polymer clay Hearts. A Reminder of what we overcame.</p>
     <div class="btn-group reveal">
       <a href="[ETSY LINK]" class="btn-primary"><span class="heart-mark" aria-hidden="true">♥</span> Shop the Hearts</a>
       <a href="#story" class="btn-secondary">Read what happened ↓</a>
@@ -316,14 +321,15 @@ footer a:hover{color:var(--white)}
     <h2 id="story-heading" class="reveal">Here's what happened.</h2>
     <div class="card reveal">
       <ul aria-label="Key facts">
-        <li><span class="bmark" aria-hidden="true">♥</span> A small business survived [X] years — recessions, 9/11, every market shift</li>
-        <li><span class="bmark" aria-hidden="true">♥</span> COVID didn't kill it. What came <em>after</em> COVID did.</li>
-        <li><span class="bmark" aria-hidden="true">♥</span> A predatory landlord. A bank that moved the goalposts. An IRS that didn't pause.</li>
-        <li><span class="bmark" aria-hidden="true">♥</span> All three. At the same time. No grace period. No negotiation that stuck.</li>
-        <li><span class="bmark" aria-hidden="true">♥</span> The business closed. The person didn't.</li>
-        <li><span class="bmark" aria-hidden="true">♥</span> What came next was a set of handmade Hearts — and a decision to tell the truth about it.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> A small business survived 24 years — recessions, market shifts, regulatory handcuffs.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> COVID didn't kill our restaurant. What COVID left behind ultimately closed our doors.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> Mandated closures, capacity limits, revenue loss, skyrocketing prices — fixed costs.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> Relentless landlords. Predatory banks. Aggressive IRS enforcement.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> All of it. All at once. No playbook.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> The business closed. The person didn't. The financial fallout didn't.</li>
+        <li><span class="bmark" aria-hidden="true">♥</span> What came next was a case study in survival — and a decision to share our truth.</li>
       </ul>
-      <p class="disclaimer">This is our lived experience. Receipts exist. The point is truth + healing.</p>
+      <p class="disclaimer">This is our lived experience — receipts exist. The point is Truth. The lesson is Healing.</p>
     </div>
   </div>
 </section>
@@ -338,7 +344,7 @@ footer a:hover{color:var(--white)}
 <section id="timeline" aria-labelledby="timeline-heading" class="section-pad">
   <div class="wrap">
     <span class="label reveal">What actually happened</span>
-    <h2 id="timeline-heading" class="reveal">Five phases.<br>One direction.</h2>
+    <h2 id="timeline-heading" class="reveal">Six phases.<br>One direction.</h2>
 
     <div class="t-stack" role="list">
 
@@ -346,35 +352,47 @@ footer a:hover{color:var(--white)}
         <div class="t-phase">Phase 1</div>
         <span class="t-date">[YEAR]</span>
         <h3>The Business Was Working.</h3>
-        <p>[X] years of operation. Real customers. A physical space that held a community together — without anyone noticing, until it was gone.</p>
+        <p>24 years spent building a business — a reputation. A restaurant in your own hometown. Real people. Community events. A place friends and family gathered, celebrated, commiserated. Then it was gone.</p>
       </article>
 
       <article class="t-card reveal" role="listitem">
         <div class="t-phase">Phase 2</div>
         <span class="t-date">[COVID YEARS]</span>
         <h3>Everything Stopped. We Adapted.</h3>
-        <p>Pivots. Cuts. Applications for relief. Some came. Most didn't. Nobody tells you how long survival mode lasts — or what it costs before the real pressure even arrives.</p>
+        <p>Mandated closures. Capacity limits. Disappearing revenue. Skyrocketing prices. Fixed costs — remained fixed. We pivoted, got innovative, applied for relief, worked harder than ever. Survival mode was indefinite. The cost was immediate. The pressure was enormous. Stress — the new norm.</p>
       </article>
 
       <article class="t-card reveal" role="listitem">
         <div class="t-phase">Phase 3</div>
         <span class="t-date">[YEAR]</span>
         <h3>The Landlord Moved First.</h3>
-        <p>[PLACEHOLDER — lease dispute, predatory terms, pressure tactics.] It looked legal on paper. It was predatory in practice.</p>
+        <p>We signed a short-term amended rent schedule to help get through the pandemic. Then the landlord sued us for late rent. Then proceeded to threaten eviction — repeatedly — during the last 2 years of our lease. He's an attorney, and this was a calculated strategy. Legal on paper. Predatory in practice.</p>
       </article>
 
       <article class="t-card reveal" role="listitem">
         <div class="t-phase">Phase 4</div>
         <span class="t-date">[YEAR]</span>
-        <h3>The Bank and the IRS Arrived.</h3>
-        <p>Not sequentially — simultaneously. [PLACEHOLDER — banking pressure, IRS enforcement.] Three institutions applying maximum pressure at once leaves no path that doesn't hurt.</p>
+        <h3>The Simultaneous Sledgehammer.</h3>
+        <p>We received an IRS notice. A massive debt we were previously unaware of — TFRP, for those of you who know what that is. The IRS levied our bank accounts in January 2022. Again in May. Again in July. Thus began the true beginning of the end.</p>
+        <p style="margin-top:12px">IRS levy. Returned checks. Bank fees. IRS levy. Returned payroll checks. More bank fees. Rent had to be paid. IRS levy. We couldn't make payroll — we had to call the IRS, call the bank, submit a form just so we could operate.</p>
+        <p style="margin-top:12px">We submitted an OIC. They denied it, kept the check — then the bank fired us. And rent was due.</p>
+        <p style="margin-top:12px;font-weight:700;color:var(--black)">Three institutions. Maximum pressure. All at once. All during COVID. This was always only going to end one way.</p>
       </article>
 
       <article class="t-card reveal" role="listitem">
         <div class="t-phase">Phase 5</div>
         <span class="t-date">[YEAR]</span>
         <h3>The Doors Closed.</h3>
-        <p>Not dramatically. Not loudly. Paperwork, silence, and a building that no longer had our name on it. [X] years. Over. What came next is what this page is actually about.</p>
+        <p>Not dramatically. Not loudly. Just — done. We reminisced. We laughed. We talked about which regulars we'd miss the most — and which ones we probably wouldn't — as we packed up the last 24 years of our lives. That last glimpse of the empty building that had been our second home will always be bittersweet.</p>
+      </article>
+
+      <article class="t-card reveal" role="listitem">
+        <div class="t-phase">Phase 6</div>
+        <span class="t-date">Now</span>
+        <h3>The Aftermath.</h3>
+        <p>We closed our doors two years ago. We sit here today personally carrying a massive IRS debt — still with no answers, no resolution, no acknowledgment, no escape.</p>
+        <p style="margin-top:12px">COVID wasn't just a "thing" for businesses to survive. For far too many small business owners, COVID was personal. COVID was transformative.</p>
+        <p style="margin-top:12px;font-weight:700;color:var(--black)">What do you do when you wake up the day after you close the restaurant you opened and ran every day for 24 years — with no restaurant to go to? For me, what came next is what this page is actually about.</p>
       </article>
 
     </div>
@@ -385,7 +403,7 @@ footer a:hover{color:var(--white)}
 <div class="pq-wrap reveal" aria-label="Featured quote">
   <div class="pull-quote">
     <blockquote>"COVID didn't end.<br>It changed form."</blockquote>
-    <cite><span class="heart-mark" aria-hidden="true">♥</span> The Reminder Project &nbsp;·&nbsp; [Year Placeholder]</cite>
+    <cite><span class="heart-mark" aria-hidden="true">♥</span> The Reminder Project &nbsp;·&nbsp; 2024</cite>
   </div>
 </div>
 
@@ -404,7 +422,7 @@ footer a:hover{color:var(--white)}
       <div class="symptom reveal" role="listitem">
         <div class="s-num">02</div>
         <h3>The timeline compression.</h3>
-        <p>Deadlines move faster than resolution can travel. You're given 30 days to solve what took 3 years to build.</p>
+        <p>Deadlines move faster than resolution can travel. You're given 30 days to solve what took years to build.</p>
       </div>
       <div class="symptom reveal" role="listitem">
         <div class="s-num">03</div>
@@ -421,11 +439,7 @@ footer a:hover{color:var(--white)}
         <h3>The isolation.</h3>
         <p>The stigma of a closed business runs deep in a culture that treats failure as character defect. Most people going through this say nothing publicly. This one will.</p>
       </div>
-      <div class="symptom reveal" role="listitem">
-        <div class="s-num">06</div>
-        <h3>The silence of institutions.</h3>
-        <p>No one at the landlord's office calls to check in. The IRS does not offer condolences. Systems don't grieve. People do.</p>
-      </div>
+
     </div>
   </div>
 </section>
@@ -436,7 +450,7 @@ footer a:hover{color:var(--white)}
     <span class="label reveal">What it did to us</span>
     <h2 id="impact-heading" class="reveal">The part nobody<br>talks about.</h2>
     <p class="reveal">Sleep changed. The kind of rest that restores you becomes rare when your nervous system is running threat assessment around the clock.</p>
-    <p class="reveal">Identity took a hit. When you've built something with your hands for [X] years, losing it isn't just financial. It's a question about who you are when the thing you built is gone.</p>
+    <p class="reveal">Identity took a hit. When you've built something with your hands for 24 years, losing it isn't just financial. It's a question about who you are when the thing you built is gone.</p>
     <p class="reveal">The grief was quiet. No one holds a funeral for a closed business. There's no ritual. You just stop going to a place that used to be yours.</p>
     <p class="punch reveal">And then — slowly — something else started.<br>Not optimism. More like: refusal.</p>
     <p class="reveal">The refusal to let this be the whole story. The refusal to disappear into the wreckage quietly. That refusal needed a shape. It became a Heart.</p>
@@ -518,7 +532,7 @@ footer a:hover{color:var(--white)}
   <div class="wrap">
     <span class="label reveal">You're not alone</span>
     <h2 id="share-heading" class="reveal">If this happened<br>to you too…</h2>
-    <p class="reveal">Millions of small businesses lived a version of this story between 2020 and [YEAR PLACEHOLDER]. Most closed quietly. Most owners didn't talk about it publicly.</p>
+    <p class="reveal">Millions of small businesses lived a version of this story between 2020 and now. Most closed quietly. Most owners didn't talk about it publicly.</p>
     <div class="community-hl reveal">
       If you lost a business — we see you.<br>
       If you're still in the middle — we see you.<br>
@@ -527,7 +541,7 @@ footer a:hover{color:var(--white)}
     <p class="reveal">We're collecting brief accounts from small business owners affected by systemic failure. Not for litigation. Not for politics. For the record. For the people who come after us and need to know they weren't alone.</p>
     <p class="reveal" style="color:rgba(255,255,255,.45);font-size:13px;">Your name stays yours. The story becomes part of something larger. All submissions reviewed before publication.</p>
     <div class="btn-group reveal" style="margin-top:28px">
-      <a href="[EMAIL / STORY SUBMISSION FORM LINK]" class="btn-light">Share Your Story</a>
+      <a href="https://reminderproject.github.io/reminder-project/collective-story.html" class="btn-light">Share Your Story</a>
     </div>
   </div>
 </section>
@@ -618,14 +632,12 @@ footer a:hover{color:var(--white)}
   <p style="margin-top:12px">
     <a href="[ETSY LINK]">Etsy Shop</a>
     &nbsp;·&nbsp;
-    <a href="[SOCIAL LINKS]">Instagram</a>
-    &nbsp;·&nbsp;
     <a href="[SOCIAL LINKS]">X / Twitter</a>
     &nbsp;·&nbsp;
-    <a href="[EMAIL / STORY SUBMISSION FORM LINK]">Contact</a>
+    <a href="https://reminderproject.github.io/reminder-project/collective-story.html">Share Your Story</a>
   </p>
   <p class="footer-disclaimer">
-    This is our lived experience. Receipts exist. The point is truth + healing.
+    This is our lived experience — receipts exist. The point is Truth. The lesson is Healing.
   </p>
 </footer>
 
@@ -646,8 +658,6 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     const id = btn.getAttribute('aria-controls');
     const ans = document.getElementById(id);
     const open = btn.classList.contains('open');
-
-    // close all
     document.querySelectorAll('.faq-q').forEach(b => {
       b.classList.remove('open');
       b.setAttribute('aria-expanded','false');
@@ -656,8 +666,6 @@ document.querySelectorAll('.faq-q').forEach(btn => {
       a.classList.remove('open');
       a.setAttribute('aria-hidden','true');
     });
-
-    // toggle clicked
     if(!open){
       btn.classList.add('open');
       btn.setAttribute('aria-expanded','true');
