@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The IRS Trap — A personal account of how the federal tax enforcement system destroys small businesses that are already struggling to survive.">
+<meta property="og:title" content="The IRS Trap — A True Account of Systemic Failure">
+<meta property="og:description" content="What began as a tool to punish corporate fraud has become a mechanism that punishes desperate small business owners for surviving as long as they could.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://reminderproject.github.io/reminder-project/irs-trap.html">
+<title>The IRS Trap — Reminder Project</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #F7F5F2;
+    --white: #FFFFFF;
+    --black: #1C1C1C;
+    --gray: #6B6B6B;
+    --light: #E2DED8;
+    --mid: #EDEAE5;
+    --red: #B03A2E;
+    --navy: #2C4A6E;
+    --amber: #8B6914;
+    --rule: #D8D4CE;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    overflow-x: hidden;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--navy); }
+
+  /* ── SITE NAV ── */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-nav-brand {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .site-nav-brand .heart { color: var(--red); }
+  .site-nav-links {
+    display: none;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  @media(min-width: 560px) { .site-nav-links { display: flex; } }
+  .site-nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .site-nav-links a:hover { color: var(--black); }
+  .site-nav-links a.active { color: var(--red); }
+  .btn-nav {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .2s;
+    border-radius: 2px;
+  }
+  .btn-nav:hover { background: #333; }
+
+  /* ── HEADER ── */
+  header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .case-stamp {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    padding: 8px 22px;
+    display: inline-block;
+  }
+
+  .exhibit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.3s forwards;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.05;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: riseIn 1.2s ease 0.6s forwards;
+  }
+
+  .sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.2s forwards;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: var(--gray);
+    text-transform: uppercase;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+
+  /* ── INTRO ── */
+  .intro-block {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .intro-block p {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--black);
+  }
+
+  .intro-block .attribution {
+    margin-top: 32px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  /* ── POEM ── */
+  .poem-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 24px 100px;
+    background: var(--bg);
+  }
+
+  .poem-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .poem-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .stanza {
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .stanza.visible { opacity: 1; transform: translateY(0); }
+
+  .stanza p {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    line-height: 1.85;
+    color: var(--black);
+  }
+
+  .stanza.heavy p {
+    font-size: clamp(1.6rem, 3.8vw, 2.1rem);
+    color: var(--black);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .stanza.callout {
+    border-left: 3px solid var(--red);
+    padding-left: 28px;
+    margin-left: -31px;
+  }
+
+  .stanza-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--rule);
+    margin: 0 auto 56px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .stanza-divider.visible { opacity: 1; }
+
+  /* ── VERDICT ── */
+  .verdict {
+    background: var(--navy);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  .verdict-inner { max-width: 680px; margin: 0 auto; }
+
+  .verdict-stamp {
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.35);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    padding: 10px 28px;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-bottom: 52px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .verdict-stamp.visible { opacity: 1; }
+
+  .verdict h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.25;
+    margin-bottom: 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s;
+  }
+
+  .verdict h2.visible { opacity: 1; transform: translateY(0); }
+
+  .verdict p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.85;
+    max-width: 580px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.9s ease 0.4s;
+  }
+
+  .verdict p.visible { opacity: 1; }
+
+  /* ── FACTS ── */
+  .facts-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .facts-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 52px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .facts-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .fact {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 0 28px;
+    margin-bottom: 48px;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    background: var(--white);
+    padding: 28px;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+
+  .fact.visible { opacity: 1; transform: translateX(0); }
+
+  .fact-num {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 0.1em;
+    padding-top: 6px;
+    text-align: right;
+    border-right: 1px solid var(--rule);
+    padding-right: 16px;
+  }
+
+  .fact-body { padding-left: 4px; }
+
+  .fact-body strong {
+    display: block;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    color: var(--black);
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .fact-body p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  /* ── CONGRESS ── */
+  .congress {
+    background: var(--mid);
+    padding: 100px 24px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+  }
+
+  .congress-inner { max-width: 680px; margin: 0 auto; }
+
+  .congress h3 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+
+  .congress blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--black);
+    margin-bottom: 44px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .congress blockquote.visible { opacity: 1; transform: translateY(0); }
+
+  .congress .demand {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gray);
+    line-height: 2.2;
+  }
+
+  .congress .demand .demand-loud {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    margin: 8px 0;
+  }
+
+  .congress .demand .demand-record {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--gray);
+    font-style: italic;
+    margin: 4px 0 12px;
+    line-height: 1.8;
+  }
+
+  .congress .demand .red-demand {
+    display: block;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-style: italic;
+    color: var(--red);
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 0;
+  }
+
+  /* ── SOLIDARITY ── */
+  .solidarity {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 120px 24px;
+    text-align: center;
+    background: var(--white);
+    border-top: 4px solid var(--navy);
+  }
+
+  .solidarity h4 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-style: italic;
+    color: var(--black);
+    font-weight: 400;
+    margin-bottom: 24px;
+    line-height: 1.15;
+  }
+
+  .solidarity p {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    color: var(--gray);
+    margin-bottom: 56px;
+    line-height: 1.9;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .share-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 20px 44px;
+    border: 1.5px solid var(--rule);
+    background: transparent;
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+  }
+
+  .btn:hover { border-color: var(--navy); color: var(--navy); background: rgba(44,74,110,0.05); }
+  .btn.primary { border-color: var(--navy); color: var(--white); background: var(--navy); font-size: 1rem; padding: 22px 56px; }
+  .btn.primary:hover { background: #1e3550; border-color: #1e3550; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 24px;
+    text-align: center;
+    background: var(--black);
+  }
+
+  footer p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    line-height: 2.2;
+  }
+
+  footer strong { color: rgba(255,255,255,0.8); }
+
+  footer a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color .2s;
+  }
+
+  footer a:hover { color: #fff; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.9; } }
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav" role="navigation" aria-label="Site navigation">
+  <a href="index.html" class="site-nav-brand">
+    <span class="heart">♥</span> Reminder Project
+  </a>
+  <div class="site-nav-links">
+    <a href="index.html">Shop</a>
+    <a href="irs-trap.html" class="active">The IRS Trap</a>
+    <a href="collectivestory.html">Share Your Story</a>
+  </div>
+  <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-nav">♥ Shop the Hearts</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<header>
+  <div class="case-stamp">United States Small Business — Personal Testimony</div>
+  <div class="exhibit">Exhibit A</div>
+  <h1>The IRS Trap</h1>
+  <p class="sub">A true account &nbsp;·&nbsp; A systemic failure &nbsp;·&nbsp; A demand for justice</p>
+  <div class="scroll-cue">↓ &nbsp; Read the record &nbsp; ↓</div>
+</header>
+
+<!-- INTRO -->
+<div class="intro-block reveal">
+  <p>
+    This isn't a political statement. It isn't partisan outrage.
+    This is a record of what happened to one small business owner
+    in America. This is how systemic problems, left unaddressed,
+    are destroying small businesses across the country.
+  </p>
+  <div class="attribution">— Written from experience. Presented as evidence.</div>
+</div>
+
+<!-- POEM -->
+<section class="poem-section">
+  <div class="poem-label">The testimony</div>
+
+  <div class="stanza">
+    <p>Oh, the dreams we once had,</p>
+    <p>How they soared, how they flew!</p>
+    <p>A business to grow, a life built anew.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>But beware of the beast called the IRS pen,</p>
+    <p>It takes down us dreamers again and again.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>It started with payroll, a tax gone awry,</p>
+    <p>An error unnoticed, left high in the sky.</p>
+    <p>Though we had an agreement, the penalties grew.</p>
+    <p>In ways and in places that I never knew!</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza callout">
+    <p>Oh, levies, and letters, and balances steep,</p>
+    <p>They pounced on my bank, leaving nothing to keep.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza heavy">
+    <p>It shocked me. It scared me. I felt so ashamed.</p>
+    <p>I knew I was trapped in the IRS game.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>No matter my efforts, no matter my plea,</p>
+    <p>It fell on deaf ears as they "collected" from me.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>With each passing day and each passing night,</p>
+    <p>I was sick with the weight of this ongoing fight,</p>
+    <p>I cried and I worried, I yelled in despair,</p>
+    <p>The burden so heavy — no justice, not fair.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza callout">
+    <p>No help came to guide me, no solace, no aid,</p>
+    <p>Just silence from all while the bills went unpaid.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>For a system so broken, it's wrong, it's not right,</p>
+    <p>To leave us to suffer, with no end in sight.</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza">
+    <p>Now I wonder, I question, I shout to the skies,</p>
+    <p>Where is the trust, the truth, and the why?</p>
+  </div>
+  <div class="stanza-divider"></div>
+
+  <div class="stanza heavy callout">
+    <p>Congress, dear Congress, the power is yours,</p>
+    <p>To fix what is broken, to open new doors.</p>
+    <p>For small business owners, we ask, we implore,</p>
+    <p>Make fairness the rule, and abuse be no more.</p>
+  </div>
+</section>
+
+<!-- VERDICT -->
+<div class="verdict">
+  <div class="verdict-inner">
+    <div class="verdict-stamp reveal-stamp">System Failure.</div>
+    <h2 class="reveal-h2">What WILLFUL looks like.</h2>
+    <p class="reveal-p">What began in the 1950s as a tool to punish corporate fraud has become a modern-day mechanism that punishes desperate small business owners for surviving as long as they could.</p>
+  </div>
+</div>
+
+<!-- FACTS -->
+<section class="facts-section">
+  <div class="facts-label">What the record shows</div>
+
+  <div class="fact">
+    <div class="fact-num">01</div>
+    <div class="fact-body">
+      <strong>One mistake. Endless penalties.</strong>
+      <p>Miss a payroll tax deposit — even once, even by accident — and the IRS stacks penalties on top of penalties. Then charges interest on all of it. The original mistake grows into a debt you can never catch up to.</p>
+    </div>
+  </div>
+
+  <div class="fact">
+    <div class="fact-num">02</div>
+    <div class="fact-body">
+      <strong>Paying doesn't make it stop.</strong>
+      <p>Even if you set up a payment plan, the penalties and interest keep building while you pay. You can do everything right — and still fall further behind.</p>
+    </div>
+  </div>
+
+  <div class="fact">
+    <div class="fact-num">03</div>
+    <div class="fact-body">
+      <strong>They can empty your bank account. Today.</strong>
+      <p>The IRS can seize everything in your business or personal bank account with little warning. No court order. No negotiation. One levy and the money you needed to make payroll, pay rent, or keep the lights on — is gone.</p>
+    </div>
+  </div>
+
+  <div class="fact">
+    <div class="fact-num">04</div>
+    <div class="fact-body">
+      <strong>There is help. You just can't reach it.</strong>
+      <p>The Taxpayer Advocate Service exists to protect people in exactly this situation. But it is underfunded, overwhelmed, and out of reach for most small business owners fighting alone.</p>
+    </div>
+  </div>
+
+  <div class="fact">
+    <div class="fact-num">05</div>
+    <div class="fact-body">
+      <strong>Big corporations don't face this alone. You do.</strong>
+      <p>Large businesses have tax attorneys and accountants on staff. Small business owners have themselves. The system is the same — but the fight is not.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONGRESS -->
+<div class="congress">
+  <div class="congress-inner">
+    <h3>A direct address</h3>
+    <blockquote class="reveal-quote">
+      "Congress, dear Congress, the power is yours — to fix what is broken, to open new doors."
+    </blockquote>
+    <div class="demand">
+      We are not asking for forgiveness.
+      <span class="demand-loud">We are demanding fairness.</span>
+      <span class="demand-record">The National Taxpayer Advocate has documented these failures in its annual reports for over two decades. The response has been silence. Small business owners are still paying the price.</span>
+      <span class="red-demand">Do your job, Congress.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SOLIDARITY -->
+<div class="solidarity">
+  <h4>Has this happened to you?</h4>
+  <p>You are not alone. You are not a failure.<br>
+  The system is broken. The record should reflect that.</p>
+  <div class="share-btns">
+    <a class="btn primary" href="collectivestory.html">Share Your Story</a>
+    <a class="btn" href="https://twitter.com/intent/tweet?text=I+wrote+this+after+living+it.+If+you%27ve+ever+been+trapped+by+the+IRS+penalty+system%2C+this+is+for+you.+%23SmallBusiness+%23IRS&url=https%3A%2F%2Freminderproject.github.io%2Freminder-project%2Firs-trap.html" target="_blank" rel="noopener">Share on X</a>
+    <a class="btn" href="index.html">← Back to Shop</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <p><strong>Reminder Project™</strong> &nbsp;·&nbsp; The IRS Trap &nbsp;·&nbsp; Personal Testimony</p>
+  <p>Born from collapse. Built by hand.</p>
+  <p style="margin-top:12px">
+    <a href="index.html">Shop the Hearts</a>
+    &nbsp;·&nbsp;
+    <a href="collectivestory.html">Share Your Story</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener">Etsy</a>
+  </p>
+  <p style="margin-top:16px;font-style:italic;font-size:0.7rem;opacity:0.6">
+    This is our lived experience — receipts exist. The point is Truth. The lesson is Healing.
+  </p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.stanza, .stanza-divider, .fact, .reveal').forEach(el => observer.observe(el));
+
+  const vObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.verdict-stamp, .reveal-h2, .reveal-p, .reveal-quote').forEach(el => vObs.observe(el));
+
+  document.querySelectorAll('.fact').forEach((el, i) => { el.style.transitionDelay = `${i * 0.1}s`; });
+</script>
+</body>
+</html>
