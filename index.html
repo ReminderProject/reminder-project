@@ -1,0 +1,688 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw16840\paperh23820\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<meta name="description" content="Reminder Project \'97 Handmade polymer clay Hearts born from a real story of systemic failure. Shop the Hearts on Etsy.">\
+<meta property="og:title" content="Reminder Project \'97 We didn't fail. The system did.">\
+<meta property="og:description" content="Handmade Hearts. Real story. No spin.">\
+<title>Reminder Project</title>\
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">\
+<style>\
+/* \uc0\u9472 \u9472  RESET & BASE \u9472 \u9472  */\
+*,*::before,*::after\{box-sizing:border-box;margin:0;padding:0\}\
+:root\{\
+  --bg:#FAF9F7;\
+  --black:#111111;\
+  --gray:#555555;\
+  --light:#E8E6E1;\
+  --red:#C0392B;\
+  --white:#FFFFFF;\
+  --shadow:0 2px 14px rgba(0,0,0,0.08);\
+  --max:680px;\
+  --pad:24px;\
+  --sec:56px;\
+\}\
+html\{scroll-behavior:smooth;-webkit-text-size-adjust:100%\}\
+body\{\
+  font-family:'Inter',system-ui,sans-serif;\
+  background:var(--bg);\
+  color:var(--black);\
+  line-height:1.65;\
+  -webkit-font-smoothing:antialiased;\
+\}\
+img\{max-width:100%;display:block\}\
+a\{color:inherit;text-decoration:none\}\
+button\{font-family:inherit;cursor:pointer\}\
+\
+/* \uc0\u9472 \u9472  SCROLL FADE \u9472 \u9472  */\
+.reveal\{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease\}\
+.reveal.visible\{opacity:1;transform:translateY(0)\}\
+\
+/* \uc0\u9472 \u9472  LAYOUT HELPERS \u9472 \u9472  */\
+.wrap\{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)\}\
+.section-pad\{padding-block:var(--sec)\}\
+.label\{\
+  display:block;font-size:10px;font-weight:700;\
+  letter-spacing:.18em;text-transform:uppercase;\
+  color:var(--gray);margin-bottom:20px;\
+\}\
+h1\{\
+  font-size:clamp(36px,9vw,64px);font-weight:900;\
+  line-height:1.04;letter-spacing:-.025em;margin-bottom:18px;\
+\}\
+h1 em\{font-style:normal;color:var(--red)\}\
+h2\{\
+  font-size:clamp(26px,5.5vw,38px);font-weight:800;\
+  line-height:1.15;letter-spacing:-.02em;margin-bottom:32px;\
+\}\
+h3\{font-size:17px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em\}\
+p\{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:16px\}\
+p:last-child\{margin-bottom:0\}\
+.punch\{font-size:18px;font-weight:700;color:var(--black);line-height:1.4;margin:28px 0\}\
+\
+/* \uc0\u9472 \u9472  BUTTONS \u9472 \u9472  */\
+.btn-primary\{\
+  display:inline-flex;align-items:center;gap:8px;\
+  background:var(--black);color:var(--white);border:none;\
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;\
+  padding:15px 26px;transition:background .2s,transform .15s;\
+\}\
+.btn-primary:hover\{background:#2a2a2a;transform:translateY(-1px)\}\
+.btn-secondary\{\
+  display:inline-flex;align-items:center;gap:8px;\
+  background:transparent;color:var(--black);\
+  border:1.5px solid var(--black);\
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;\
+  padding:15px 26px;transition:background .2s,color .2s;\
+\}\
+.btn-secondary:hover\{background:var(--black);color:var(--white)\}\
+.btn-light\{\
+  display:inline-flex;align-items:center;gap:8px;\
+  background:var(--white);color:var(--black);border:none;\
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;\
+  padding:15px 26px;transition:background .2s;\
+\}\
+.btn-light:hover\{background:#e8e8e8\}\
+.btn-group\{display:flex;gap:12px;flex-wrap:wrap\}\
+.heart-mark\{color:var(--red)\}\
+\
+/* CTA BAND \'97 repeated */\
+.cta-band\{\
+  border-top:1px solid var(--light);border-bottom:1px solid var(--light);\
+  padding:40px var(--pad);text-align:center;\
+  display:flex;flex-direction:column;align-items:center;gap:12px;\
+\}\
+.cta-band p\{font-size:14px;margin:0\}\
+\
+/* \uc0\u9472 \u9472  NAV \u9472 \u9472  */\
+nav\{\
+  position:sticky;top:0;z-index:100;\
+  background:var(--bg);border-bottom:1px solid var(--light);\
+  padding:13px var(--pad);\
+  display:flex;align-items:center;justify-content:space-between;\
+\}\
+.nav-brand\{\
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;\
+\}\
+.nav-links\{display:none;gap:24px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase\}\
+@media(min-width:560px)\{.nav-links\{display:flex\}\}\
+.nav-links a\{color:var(--gray);transition:color .2s\}\
+.nav-links a:hover\{color:var(--black)\}\
+\
+/* \uc0\u9472 \u9472  HERO \u9472 \u9472  */\
+#hero\{padding:96px var(--pad) 80px\}\
+.hero-eyebrow\{\
+  font-size:11px;font-weight:700;letter-spacing:.2em;\
+  text-transform:uppercase;color:var(--gray);margin-bottom:28px;\
+\}\
+.hero-sub\{font-size:19px;font-weight:400;color:var(--gray);margin-bottom:6px;line-height:1.4\}\
+.hero-micro\{font-size:13px;color:var(--gray);font-style:italic;margin-bottom:44px\}\
+\
+/* \uc0\u9472 \u9472  BULLETS \u9472 \u9472  */\
+#story .card\{\
+  background:var(--white);border:1px solid var(--light);padding:36px 28px;\
+\}\
+#story ul\{list-style:none\}\
+#story li\{\
+  font-size:15px;line-height:1.65;\
+  padding:11px 0;border-bottom:1px solid var(--light);\
+  display:flex;gap:12px;align-items:flex-start;\
+\}\
+#story li:last-child\{border-bottom:none\}\
+#story .bmark\{color:var(--red);flex-shrink:0;margin-top:3px\}\
+.disclaimer\{\
+  font-size:14px;font-weight:700;color:var(--black);\
+  font-style:normal;letter-spacing:.01em;\
+  margin-top:24px;padding:18px 20px;\
+  border-top:2px solid var(--black);\
+  border-left:3px solid var(--red);\
+  background:var(--bg);\
+  line-height:1.6;\
+\}\
+\
+/* \uc0\u9472 \u9472  TIMELINE \u9472 \u9472  */\
+#timeline\{background:var(--white)\}\
+.t-stack\{display:flex;flex-direction:column;gap:14px;margin-top:36px\}\
+.t-card\{\
+  background:var(--bg);border:1px solid var(--light);\
+  box-shadow:var(--shadow);padding:26px 24px;\
+  border-left:3px solid var(--light);\
+  position:relative;transition:border-left-color .25s,box-shadow .25s;\
+\}\
+.t-card:hover\{border-left-color:var(--red);box-shadow:0 4px 22px rgba(0,0,0,.1)\}\
+.t-phase\{\
+  font-size:10px;font-weight:700;letter-spacing:.15em;\
+  text-transform:uppercase;color:var(--red);margin-bottom:5px;\
+\}\
+.t-date\{\
+  position:absolute;top:24px;right:20px;\
+  font-size:10px;font-weight:600;letter-spacing:.1em;\
+  text-transform:uppercase;color:var(--light);\
+\}\
+\
+/* \uc0\u9472 \u9472  PULL QUOTE \u9472 \u9472  */\
+.pq-wrap\{padding:0 var(--pad) var(--sec);max-width:var(--max);margin-inline:auto\}\
+.pull-quote\{\
+  border-top:2px solid var(--black);border-bottom:2px solid var(--black);\
+  padding:52px 0;text-align:center;\
+\}\
+.pull-quote blockquote\{\
+  font-size:clamp(22px,5vw,32px);font-weight:700;\
+  line-height:1.25;letter-spacing:-.01em;\
+\}\
+.pull-quote cite\{\
+  display:block;margin-top:20px;font-style:normal;\
+  font-size:11px;font-weight:600;letter-spacing:.14em;\
+  text-transform:uppercase;color:var(--gray);\
+\}\
+\
+/* \uc0\u9472 \u9472  SYSTEMIC FAILURE \u9472 \u9472  */\
+.symptom\{padding:22px 0;border-bottom:1px solid var(--light)\}\
+.symptom:first-of-type\{border-top:1px solid var(--light)\}\
+.s-num\{\
+  font-size:10px;font-weight:700;letter-spacing:.15em;\
+  text-transform:uppercase;color:var(--red);margin-bottom:5px;\
+\}\
+.symptom h3\{margin-bottom:6px\}\
+\
+/* \uc0\u9472 \u9472  HUMAN IMPACT \u9472 \u9472  */\
+#impact\{background:var(--white)\}\
+\
+/* \uc0\u9472 \u9472  HEART SECTION \u9472 \u9472  */\
+#shop\{background:var(--bg)\}\
+.spec-grid\{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0\}\
+.spec-card\{background:var(--white);border:1px solid var(--light);padding:22px\}\
+.spec-label\{\
+  font-size:10px;font-weight:700;letter-spacing:.15em;\
+  text-transform:uppercase;color:var(--gray);margin-bottom:6px;\
+\}\
+.spec-price\{font-size:24px;font-weight:900;letter-spacing:-.02em\}\
+.spec-desc\{font-size:13px;color:var(--gray);margin-top:4px\}\
+\
+/* \uc0\u9472 \u9472  HOW IT WORKS \u9472 \u9472  */\
+#how\{background:var(--white)\}\
+.steps\{margin-top:32px\}\
+.step\{\
+  display:flex;gap:20px;align-items:flex-start;\
+  padding:26px 0;border-bottom:1px solid var(--light);\
+\}\
+.step:first-child\{border-top:1px solid var(--light)\}\
+.step-n\{\
+  font-size:36px;font-weight:900;color:var(--light);\
+  line-height:1;flex-shrink:0;width:44px;\
+\}\
+\
+/* \uc0\u9472 \u9472  COMMUNITY \u9472 \u9472  */\
+#share\{background:var(--black);color:var(--white)\}\
+#share .label\{color:rgba(255,255,255,.35)\}\
+#share h2\{color:var(--white)\}\
+#share p\{color:rgba(255,255,255,.6)\}\
+.community-hl\{\
+  font-size:17px;font-weight:600;color:var(--white);\
+  line-height:1.55;margin:28px 0;\
+\}\
+\
+/* \uc0\u9472 \u9472  FAQ \u9472 \u9472  */\
+#faq\{background:var(--bg)\}\
+.faq-list\{margin-top:32px\}\
+.faq-item\{border-bottom:1px solid var(--light)\}\
+.faq-item:first-child\{border-top:1px solid var(--light)\}\
+.faq-q\{\
+  width:100%;background:none;border:none;text-align:left;\
+  display:flex;justify-content:space-between;align-items:center;gap:12px;\
+  padding:22px 0;font-size:15px;font-weight:700;cursor:pointer;\
+  color:var(--black);\
+\}\
+.faq-q .icon\{\
+  color:var(--red);font-size:20px;font-weight:300;\
+  flex-shrink:0;transition:transform .25s;line-height:1;\
+\}\
+.faq-q.open .icon\{transform:rotate(45deg)\}\
+.faq-a\{\
+  font-size:14px;color:var(--gray);line-height:1.75;\
+  max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s;\
+  padding-bottom:0;\
+\}\
+.faq-a.open\{max-height:300px;padding-bottom:22px\}\
+\
+/* \uc0\u9472 \u9472  FINAL CTA \u9472 \u9472  */\
+#final\{\
+  padding:100px var(--pad);text-align:center;\
+  max-width:var(--max);margin-inline:auto;\
+\}\
+#final p\{font-size:16px;margin-bottom:40px\}\
+.final-tag\{\
+  font-size:12px;color:var(--gray);font-style:italic;\
+  margin-top:32px;line-height:1.6;\
+\}\
+\
+/* \uc0\u9472 \u9472  FOOTER \u9472 \u9472  */\
+footer\{\
+  background:var(--black);color:rgba(255,255,255,.4);\
+  text-align:center;padding:40px var(--pad);\
+  font-size:11px;line-height:2;letter-spacing:.04em;\
+\}\
+footer strong\{color:rgba(255,255,255,.8)\}\
+footer a\{color:rgba(255,255,255,.5);transition:color .2s\}\
+footer a:hover\{color:var(--white)\}\
+.footer-disclaimer\{\
+  margin-top:20px;padding-top:20px;\
+  border-top:1px solid rgba(255,255,255,.1);\
+  font-style:italic;font-size:11px;\
+\}\
+\
+/* \uc0\u9472 \u9472  RESPONSIVE \u9472 \u9472  */\
+@media(max-width:480px)\{\
+  :root\{--sec:64px;--pad:20px\}\
+  .spec-grid\{grid-template-columns:1fr\}\
+  .btn-group\{flex-direction:column\}\
+  .btn-primary,.btn-secondary,.btn-light\{width:100%;justify-content:center\}\
+  .cta-band .btn-primary\{width:auto\}\
+\}\
+</style>\
+</head>\
+<body>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  NAV \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<nav role="banner">\
+  <div class="nav-brand">\
+    <span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Reminder Project\
+  </div>\
+  <nav aria-label="Page sections" class="nav-links">\
+    <a href="#story">Story</a>\
+    <a href="#timeline">Timeline</a>\
+    <a href="#shop">Shop</a>\
+    <a href="#share">Share</a>\
+  </nav>\
+  <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary" aria-label="Shop the Hearts on Etsy">\
+    <span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop the Hearts\
+  </a>\
+</nav>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  HERO \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="hero" aria-label="Introduction">\
+  <div class="wrap">\
+    <p class="hero-eyebrow reveal">A true story &nbsp;+&nbsp; A reminder to hold &nbsp;+&nbsp; No spin</p>\
+    <h1 class="reveal">We didn't fail.<br>The <em>system</em> did.</h1>\
+    <p class="hero-sub reveal">The reminder that survived it \uc0\u8595 </p>\
+    <p class="hero-micro reveal">Handmade polymer clay Hearts. A Reminder of what we overcame.</p>\
+    <div class="btn-group reveal">\
+      <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop the Hearts</a>\
+      <a href="#story" class="btn-secondary">Read what happened \uc0\u8595 </a>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  THE SHORTEST VERSION \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="story" aria-labelledby="story-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">The 60-second version</span>\
+    <h2 id="story-heading" class="reveal">Here's what happened.</h2>\
+    <div class="card reveal">\
+      <ul aria-label="Key facts">\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> A small business survived 24 years \'97 recessions, market shifts, regulatory handcuffs.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> COVID didn't kill our restaurant. What COVID left behind ultimately closed our doors.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> Mandated closures, capacity limits, revenue loss, skyrocketing prices \'97 fixed costs.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> Relentless landlords. Predatory banks. Aggressive IRS enforcement.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> All of it. All at once. No playbook.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> The business closed. The person didn't. The financial fallout didn't.</li>\
+        <li><span class="bmark" aria-hidden="true">\uc0\u9829 </span> What came next was a case study in survival \'97 and a decision to share our truth.</li>\
+      </ul>\
+      <p class="disclaimer">This is our lived experience \'97 receipts exist. The point is Truth. The lesson is Healing.</p>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  CTA BAND 1 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<div class="cta-band reveal" aria-label="Shop prompt">\
+  <p>Standard Hearts $20 &nbsp;\'b7&nbsp; Custom Ribbon Hearts $26</p>\
+  <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop the Hearts on Etsy</a>\
+</div>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  TIMELINE \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="timeline" aria-labelledby="timeline-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">What actually happened</span>\
+    <h2 id="timeline-heading" class="reveal">Six phases.<br>One direction.</h2>\
+\
+    <div class="t-stack" role="list">\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 1</div>\
+        <span class="t-date">[YEAR]</span>\
+        <h3>The Business Was Working.</h3>\
+        <p>24 years spent building a business \'97 a reputation. A restaurant in your own hometown. Real people. Community events. A place friends and family gathered, celebrated, commiserated. Then it was gone.</p>\
+      </article>\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 2</div>\
+        <span class="t-date">[COVID YEARS]</span>\
+        <h3>Everything Stopped. We Adapted.</h3>\
+        <p>Mandated closures. Capacity limits. Disappearing revenue. Skyrocketing prices. Fixed costs \'97 remained fixed. We pivoted, got innovative, applied for relief, worked harder than ever. Survival mode was indefinite. The cost was immediate. The pressure was enormous. Stress \'97 the new norm.</p>\
+      </article>\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 3</div>\
+        <span class="t-date">[YEAR]</span>\
+        <h3>The Landlord Moved First.</h3>\
+        <p>We signed a short-term amended rent schedule to help get through the pandemic. Then the landlord sued us for late rent. Then proceeded to threaten eviction \'97 repeatedly \'97 during the last 2 years of our lease. He's an attorney, and this was a calculated strategy. Legal on paper. Predatory in practice.</p>\
+      </article>\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 4</div>\
+        <span class="t-date">[YEAR]</span>\
+        <h3>The Simultaneous Sledgehammer.</h3>\
+        <p>We received an IRS notice. A massive debt we were previously unaware of \'97 TFRP, for those of you who know what that is. The IRS levied our bank accounts in January 2022. Again in May. Again in July. Thus began the true beginning of the end.</p>\
+        <p style="margin-top:12px">IRS levy. Returned checks. Bank fees. IRS levy. Returned payroll checks. More bank fees. Rent had to be paid. IRS levy. We couldn't make payroll \'97 we had to call the IRS, call the bank, submit a form just so we could operate.</p>\
+        <p style="margin-top:12px">We submitted an OIC. They denied it, kept the check \'97 then the bank fired us. And rent was due.</p>\
+        <p style="margin-top:12px;font-weight:700;color:var(--black)">Three institutions. Maximum pressure. All at once. All during COVID. This was always only going to end one way.</p>\
+      </article>\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 5</div>\
+        <span class="t-date">[YEAR]</span>\
+        <h3>The Doors Closed.</h3>\
+        <p>Not dramatically. Not loudly. Just \'97 done. We reminisced. We laughed. We talked about which regulars we'd miss the most \'97 and which ones we probably wouldn't \'97 as we packed up the last 24 years of our lives. That last glimpse of the empty building that had been our second home will always be bittersweet.</p>\
+      </article>\
+\
+      <article class="t-card reveal" role="listitem">\
+        <div class="t-phase">Phase 6</div>\
+        <span class="t-date">Now</span>\
+        <h3>The Aftermath.</h3>\
+        <p>We closed our doors two years ago. We sit here today personally carrying a massive IRS debt \'97 still with no answers, no resolution, no acknowledgment, no escape.</p>\
+        <p style="margin-top:12px">COVID wasn't just a "thing" for businesses to survive. For far too many small business owners, COVID was personal. COVID was transformative.</p>\
+        <p style="margin-top:12px;font-weight:700;color:var(--black)">What do you do when you wake up the day after you close the restaurant you opened and ran every day for 24 years \'97 with no restaurant to go to? For me, what came next is what this page is actually about.</p>\
+      </article>\
+\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  PULL QUOTE \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<div class="pq-wrap reveal" aria-label="Featured quote">\
+  <div class="pull-quote">\
+    <blockquote>"COVID didn't end.<br>It changed form."</blockquote>\
+    <cite><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> The Reminder Project &nbsp;\'b7&nbsp; 2024</cite>\
+  </div>\
+</div>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  SYSTEMIC FAILURE \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section aria-labelledby="system-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">Pattern recognition</span>\
+    <h2 id="system-heading" class="reveal">This is what systemic<br>failure looks like.</h2>\
+\
+    <div role="list">\
+      <div class="symptom reveal" role="listitem">\
+        <div class="s-num">01</div>\
+        <h3>The language changes.</h3>\
+        <p>Lease terms get reinterpreted. Verbal agreements vanish. What was promised in conversation is suddenly "not in the contract."</p>\
+      </div>\
+      <div class="symptom reveal" role="listitem">\
+        <div class="s-num">02</div>\
+        <h3>The timeline compression.</h3>\
+        <p>Deadlines move faster than resolution can travel. You're given 30 days to solve what took years to build.</p>\
+      </div>\
+      <div class="symptom reveal" role="listitem">\
+        <div class="s-num">03</div>\
+        <h3>The simultaneous pressure.</h3>\
+        <p>One institution is manageable. Two is a grind. Three at once \'97 landlord, bank, federal agency \'97 is a coordinated weight no small operator is built to absorb.</p>\
+      </div>\
+      <div class="symptom reveal" role="listitem">\
+        <div class="s-num">04</div>\
+        <h3>The help that arrives late.</h3>\
+        <p>SBA programs. State relief. Federal aid. Some real, most inaccessible. Designed for businesses with accounting departments. We were a small team.</p>\
+      </div>\
+      <div class="symptom reveal" role="listitem">\
+        <div class="s-num">05</div>\
+        <h3>The isolation.</h3>\
+        <p>The stigma of a closed business runs deep in a culture that treats failure as character defect. Most people going through this say nothing publicly. This one will.</p>\
+      </div>\
+\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  HUMAN IMPACT \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="impact" aria-labelledby="impact-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">What it did to us</span>\
+    <h2 id="impact-heading" class="reveal">The part nobody<br>talks about.</h2>\
+    <p class="reveal">Sleep changed. The kind of rest that restores you becomes rare when your nervous system is running threat assessment around the clock.</p>\
+    <p class="reveal">Identity took a hit. When you've built something with your hands for 24 years, losing it isn't just financial. It's a question about who you are when the thing you built is gone.</p>\
+    <p class="reveal">The grief was quiet. No one holds a funeral for a closed business. There's no ritual. You just stop going to a place that used to be yours.</p>\
+    <p class="punch reveal">And then \'97 slowly \'97 something else started.<br>Not optimism. More like: refusal.</p>\
+    <p class="reveal">The refusal to let this be the whole story. The refusal to disappear into the wreckage quietly. That refusal needed a shape. It became a Heart.</p>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  THE HEART \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="shop" aria-labelledby="shop-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> The object</span>\
+    <h2 id="shop-heading" class="reveal">Something had to<br>come from it.</h2>\
+\
+    <p class="reveal">The first Heart wasn't made to sell. It was made to cope.</p>\
+    <p class="reveal">I started working with polymer clay during one of the hardest stretches of my life &#8212; the kind where getting out of bed felt like a victory and anxiety lived in my chest like a weight I couldn't shake. I wasn't trying to make anything. I just needed my hands to <em>do something</em> while my brain tried to make sense of everything falling apart.</p>\
+    <p class="reveal">And what they kept forming &#8212; gripping that clay like it was the only solid thing left &#8212; were Hearts.</p>\
+    <p class="reveal">Simple. Imperfect. But something about them felt&#8230; right.</p>\
+    <p class="reveal">I'd hold one while I worked through a hard conversation. I'd keep another on my desk where I could see it. And without meaning to, I started associating each Heart with what I was carrying &#8212; this one held my grief, that one reminded me to breathe, another was my <em>"you've got this"</em> on the days I didn't believe it.</p>\
+    <p class="punch reveal">They became my external hard drive for emotions I couldn't hold on my own in that particular moment.</p>\
+    <p class="reveal">Staring at this pile of perfectly imperfect Hearts, I realized they weren't just helping me survive. They were giving me something tangible to anchor to when everything felt untethered. A visual Reminder. A touchstone. A permission slip to feel what I was feeling &#8212; without drowning in it.</p>\
+    <p class="reveal">That's when I knew I wanted to share them.</p>\
+    <p class="reveal">Because if a little clay Heart could hold space for my hardest days, maybe it could do the same for yours.</p>\
+\
+    <p class="label reveal">How It Works</p>\
+    <p class="reveal">Each Heart comes with a Reminder Note &#8212; a card for you to write down what <em>your</em> Heart will carry. The meaning is yours. The Reminder is yours. The Heart just holds it for you, every time you see it or pick it up.</p>\
+    <p class="reveal"><strong>Find a Heart that speaks to you. Name what it means. And let it do its quiet work.</strong></p>\
+\
+    <div class="spec-grid reveal" role="list" aria-label="Product options">\
+      <div class="spec-card" role="listitem">\
+        <div class="spec-label">Standard Heart</div>\
+        <div class="spec-price">$20</div>\
+        <div class="spec-desc">Multiple color families. Ready to ship.</div>\
+      </div>\
+      <div class="spec-card" role="listitem">\
+        <div class="spec-label">Custom Ribbon Heart</div>\
+        <div class="spec-price">$26</div>\
+        <div class="spec-desc">Personalized ribbon. Leave a note at checkout.</div>\
+      </div>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  CTA BAND 2 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<div class="cta-band reveal" aria-label="Shop prompt">\
+  <p>Every Heart is made by hand. Ships from the USA.</p>\
+  <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop the Hearts on Etsy</a>\
+</div>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  HOW IT WORKS \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="how" aria-labelledby="how-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">Simple</span>\
+    <h2 id="how-heading" class="reveal">Three steps.<br>That's it.</h2>\
+    <div class="steps" role="list">\
+      <div class="step reveal" role="listitem">\
+        <div class="step-n" aria-hidden="true">01</div>\
+        <div>\
+          <h3>Choose Your Heart</h3>\
+          <p>Browse the Etsy shop. Multiple colors. Standard or custom ribbon. Each one handmade \'97 no two are exactly alike.</p>\
+        </div>\
+      </div>\
+      <div class="step reveal" role="listitem">\
+        <div class="step-n" aria-hidden="true">02</div>\
+        <div>\
+          <h3>Tell Us Who It's For</h3>\
+          <p>Leave a note at checkout. A name. A date. A word. You don't have to explain yourself. The context can stay private.</p>\
+        </div>\
+      </div>\
+      <div class="step reveal" role="listitem">\
+        <div class="step-n" aria-hidden="true">03</div>\
+        <div>\
+          <h3>It Arrives. You Hold It.</h3>\
+          <p>Pocket. Desk. Someone who needs to feel remembered. A small, handmade, real thing in an increasingly abstract world.</p>\
+        </div>\
+      </div>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  COMMUNITY \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="share" aria-labelledby="share-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">You're not alone</span>\
+    <h2 id="share-heading" class="reveal">If this happened<br>to you too\'85</h2>\
+    <p class="reveal">Millions of small businesses lived a version of this story between 2020 and now. Most closed quietly. Most owners didn't talk about it publicly.</p>\
+    <div class="community-hl reveal">\
+      If you lost a business \'97 we see you.<br>\
+      If you're still in the middle \'97 we see you.<br>\
+      If you're rebuilding \'97 we see you.\
+    </div>\
+    <p class="reveal">We're collecting brief accounts from small business owners affected by systemic failure. Not for litigation. Not for politics. For the record. For the people who come after us and need to know they weren't alone.</p>\
+    <p class="reveal" style="color:rgba(255,255,255,.45);font-size:13px;">Your name stays yours. The story becomes part of something larger. All submissions reviewed before publication.</p>\
+    <div class="btn-group reveal" style="margin-top:28px">\
+      <a href="https://reminderproject.github.io/reminder-project/collective-story.html" class="btn-light">Share Your Story</a>\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  FAQ \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<section id="faq" aria-labelledby="faq-heading" class="section-pad">\
+  <div class="wrap">\
+    <span class="label reveal">Questions</span>\
+    <h2 id="faq-heading" class="reveal">Five things people<br>usually ask.</h2>\
+\
+    <div class="faq-list" role="list">\
+\
+      <div class="faq-item reveal" role="listitem">\
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1">\
+          Is this a political project?\
+          <span class="icon" aria-hidden="true">+</span>\
+        </button>\
+        <div id="faq1" class="faq-a" aria-hidden="true">\
+          No. Being squeezed by a landlord, a bank, and the IRS isn't partisan \'97 it's a human experience that crosses every political line. The story is factual. The tone is calm. That's the whole point.\
+        </div>\
+      </div>\
+\
+      <div class="faq-item reveal" role="listitem">\
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2">\
+          Are the Hearts really handmade?\
+          <span class="icon" aria-hidden="true">+</span>\
+        </button>\
+        <div id="faq2" class="faq-a" aria-hidden="true">\
+          Every single one. Polymer clay, shaped and finished by hand. No factory. No drop-shipping. When you hold one, you're holding something a person actually made.\
+        </div>\
+      </div>\
+\
+      <div class="faq-item reveal" role="listitem">\
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3">\
+          Standard vs. Custom Ribbon \'97 what's the difference?\
+          <span class="icon" aria-hidden="true">+</span>\
+        </button>\
+        <div id="faq3" class="faq-a" aria-hidden="true">\
+          Standard Hearts ($20) come in multiple colors, ready to ship. Custom Ribbon Hearts ($26) include a personalized ribbon element \'97 just leave your note at checkout.\
+        </div>\
+      </div>\
+\
+      <div class="faq-item reveal" role="listitem">\
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4">\
+          Can I buy one as a gift?\
+          <span class="icon" aria-hidden="true">+</span>\
+        </button>\
+        <div id="faq4" class="faq-a" aria-hidden="true">\
+          Absolutely. The note at checkout stays between you and whoever receives it. We'll never share it.\
+        </div>\
+      </div>\
+\
+      <div class="faq-item reveal" role="listitem">\
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5">\
+          Why tell this story publicly?\
+          <span class="icon" aria-hidden="true">+</span>\
+        </button>\
+        <div id="faq5" class="faq-a" aria-hidden="true">\
+          Because silence protected no one. Because the systems that failed us are still operating the same way for someone else right now. We're not interested in revenge. We're interested in the record.\
+        </div>\
+      </div>\
+\
+    </div>\
+  </div>\
+</section>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  CTA BAND 3 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<div class="cta-band reveal" aria-label="Final shop prompt">\
+  <p>Standard Hearts $20 &nbsp;\'b7&nbsp; Custom Ribbon Hearts $26 &nbsp;\'b7&nbsp; Ships from USA</p>\
+  <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop the Hearts on Etsy</a>\
+</div>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  FINAL CTA \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<div id="final" aria-labelledby="final-heading">\
+  <h2 id="final-heading" class="reveal">Ready to hold<br>something real?</h2>\
+  <p class="reveal">Every Heart is made by hand. Every one carries weight.<br>Every purchase supports the person who made it \'97 and the story being told around it.</p>\
+  <div class="btn-group reveal" style="justify-content:center">\
+    <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener" class="btn-primary"><span class="heart-mark" aria-hidden="true">\uc0\u9829 </span> Shop Reminder Project</a>\
+    <button class="btn-secondary" onclick="navigator.share ? navigator.share(\{title:'Reminder Project',url:window.location.href\}) : alert('Copy this link to share.')">Share This Page</button>\
+  </div>\
+  <p class="final-tag reveal">"We didn't fail. The system did.<br>The reminder that survived it."</p>\
+</div>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  FOOTER \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<footer role="contentinfo">\
+  <p><strong>Reminder Project\'99</strong> &nbsp;\'b7&nbsp; Handmade in the USA</p>\
+  <p>Born from collapse. Built by hand.</p>\
+  <p style="margin-top:12px">\
+    <a href="https://www.etsy.com/shop/ReminderProject" target="_blank" rel="noopener">Etsy Shop</a>\
+    &nbsp;\'b7&nbsp;\
+    <a href="[SOCIAL LINKS]">X / Twitter</a>\
+    &nbsp;\'b7&nbsp;\
+    <a href="https://reminderproject.github.io/reminder-project/collective-story.html">Share Your Story</a>\
+  </p>\
+  <p class="footer-disclaimer">\
+    This is our lived experience \'97 receipts exist. The point is Truth. The lesson is Healing.\
+  </p>\
+</footer>\
+\
+<!-- \uc0\u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  SCRIPTS \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552 \u9552  -->\
+<script>\
+// \uc0\u9472 \u9472  SCROLL REVEAL \u9472 \u9472 \
+const reveals = document.querySelectorAll('.reveal');\
+const observer = new IntersectionObserver(entries => \{\
+  entries.forEach(e => \{\
+    if(e.isIntersecting)\{e.target.classList.add('visible');observer.unobserve(e.target)\}\
+  \});\
+\},\{threshold:0.12,rootMargin:'0px 0px -40px 0px'\});\
+reveals.forEach(el => observer.observe(el));\
+\
+// \uc0\u9472 \u9472  FAQ ACCORDION \u9472 \u9472 \
+document.querySelectorAll('.faq-q').forEach(btn => \{\
+  btn.addEventListener('click', () => \{\
+    const id = btn.getAttribute('aria-controls');\
+    const ans = document.getElementById(id);\
+    const open = btn.classList.contains('open');\
+    document.querySelectorAll('.faq-q').forEach(b => \{\
+      b.classList.remove('open');\
+      b.setAttribute('aria-expanded','false');\
+    \});\
+    document.querySelectorAll('.faq-a').forEach(a => \{\
+      a.classList.remove('open');\
+      a.setAttribute('aria-hidden','true');\
+    \});\
+    if(!open)\{\
+      btn.classList.add('open');\
+      btn.setAttribute('aria-expanded','true');\
+      ans.classList.add('open');\
+      ans.setAttribute('aria-hidden','false');\
+    \}\
+  \});\
+\});\
+</script>\
+</body>\
+</html>}
